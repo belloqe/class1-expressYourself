@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <title>Aula 1</title> 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="task1.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logomarca">
+      <img src="img/clc.png" width="100px" height="100px">
+    </div>
+
+    <nav>
+      <ul class="menu">
+          <li><a href="task1.html">Classes</a></li>
+          <li><a href="#">Extra Material</a></li>
+          <li><a href="#">Any Question?</a></li>
+      </ul>
+  </nav>
+  </header>
+
+  <div class="container">
+    <!-- In order to express themselfs using a kind of art, 
+      stds will use the drawing space bellow to draw their 
+      impressions exposed creative expressions.-->
+      <section class="tools-board">
+        <div class="row">
+          <label class="title">Shapes</label>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <img src="img/icons/rectangle.svg" alt="">
+              <span>Rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+              <img src="img/icons/circle.svg" alt="">
+              <span>Circle</span>
+            </li>
+            <li class="option tool" id="triangle">
+              <img src="img/icons/triangle.svg" alt="">
+              <span>Triangle</span>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="fill-color">
+              <label for="fill-color">Fill color</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <img src="img/icons/brush.svg" alt="">
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <img src="img/icons/eraser.svg" alt="">
+              <span>Eraser</span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5">
+            </li>
+          </ul>
+        </div>
+        <div class="row colors">
+          <label class="title">Colors</label>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4A98F7">
+            </li>
+          </ul>
+        </div>
+        <div class="row buttons">
+          <button class="clear-canvas">Clear Canvas</button>
+          <button class="save-img">Save As Image</button>
+        </div>
+    </section>
+      
+    <section class="drawing-board">
+      <canvas></canvas>
+    </section>
+
+    <section class="container2">
+      <!--Now, stds will observe the most famous pictures with 
+        its respective description (like a creative expression)
+        and complete the other 3 pictures' by searching about 
+        the history of the picture and writting it on the text space.-->
+      
+      <div class="pictures">
+        <h4>Mona Lisa</h4>
+        <img src="img/monalisa.jpg" class="images">
+
+        <br>
+        <p>Although there are other results such as fear, anguish or annoyance, the highest percentage (86%) of the traits, visible in the expression lines around the eyes and in the curve of the lips, seem to indicate happiness. Either way, the mystery of Mona Lisa's smile remains.</p>
+      
+        <textarea id="story" name="story" rows="5" cols="120">
+        </textarea>
+      </div>
+
+      <div class="pictures">
+        <h4>The Starry Night</h4>
+        <img src="img/theStarry_night.jpg" class="images">
+        
+        <br>
+        <p>It features the view from a bedroom window of the psychiatric asylum in Saint-Rémy-de-Provence, a French commune. After a psychological crisis that evolved into the self-mutilation of his left ear, Van Gogh decided to be admitted to the aforementioned asylum.</p>
+
+        <textarea id="story" name="story" rows="5" cols="120">
+        </textarea>
+      </div>
+
+      <div class="pictures">
+        <h4>The Persistence Of Memory</h4>
+        <img src="img/thePersistancyOf_Memory.jpg" class="images">
+
+        <br>
+        <p>Relies on self-induced paranoia and hallucinations to facilitate the creation of a work of art. He developed this technique in the 1930s, amid a current within surrealism that explored ideas of automatism and self-awareness.</p>
+
+        <textarea id="story" name="story" rows="5" cols="120">
+        </textarea>
+      </div>
+
+      <div class="pictures">
+        <h4>The Last Supper</h4>
+        <img src="img/theLast_Supper.jpg" class="images"> 
+
+        <br>
+        <p>The Last Supper by Leonardo Da Vinci is a painting that depicts the biblical passages that tell about the betrayal of Jesus Christ by one of his disciples. The work was done on the wall of a church in Milan, Italy.The Last Supper by Leonardo Da Vinci is a painting that depicts the biblical passages that tell about the betrayal of Jesus Christ by one of his disciples. The work was done on the wall of a church in Milan, Italy.</p>
+        
+        <textarea id="story" name="story" rows="5" cols="120">
+        </textarea>
+      </div>
+
+    </section>
+  </div>
+</body>
+
+<main class="main">
+  <div class="container">
+    
+    <!-- Objectives:
+        Expose stds to a wide range of creative expression, from songs and paintings, to presentations and personal narratives.-->
+
+    <!-- Preparation:
+      Stds  --> 
+      
+    <!--Performing: 
+      -->
+      
+    <div class="exercise1">
+      <h3>1. Read and listen to the song One Truth by Pardis Sabeti's band, Thousand Days.</h3>
+      <!-- Reprodução simples de áudio -->
+      <video controls>
+          <source src="songs/One Truth.mp3" type="video/ogg">
+          <source src="songs/One Truth.mp4" type="video/mp4">
+          Seu navegador não suporta o elemento <code>video</code>.
+      </video>
+    </div>
+
+    <div class="lyrics1">
+      <h2>"One Truth" - Lyrics</h2>   
+      <p class="lyrics-lines">
+          <p>I’m sitting in here in this room</p>
+          <p>Watching everything move</p>
+          <p>I do not know how this city was built</p>
+          <p>We are forsaken to the sound</p>
+          <p>Oh that life that goes</p>
+          <p>But we were born to radiate</p>
+          <br> 
+          <p>Chorus</p>
+          <p>Uhh uhh uhh uhh yeah yeah yeah yeah x 3</p>
+          <br> 
+          <p>Verse 2</p>
+          <p>We are gathered on the ground waiting for a sign to arrive</p>
+          <p>Looking for the answers in the starry sky</p>
+          <p>But we were home all along</p>
+          <p>And we are the light</p>
+          <p>We think, we speak, we walk, we breathe the air</p>
+          <br> 
+          <p>Chorus</p>
+          <p>Uhh uhh uhh uhh yeah yeah yeah yeah x 3</p>
+          <br> 
+          <p>Yeah</p>
+          <p>A lifetime that we write</p>
+          <p>We laugh</p>
+          <p>We cry</p>
+          <p>We pray</p>
+          <p>We areee love</p>
+          <br>
+          <p>We dream</p>
+          <p>We scream</p>
+          <p>We strive</p>
+          <p>Your hunger will never die</p>
+          <p>I’m here in this fight, always</p>
+          <br> 
+          <p>Chorus</p>
+          <p>Uhh uhh uhh uhh yeah yeah yeah yeah x 6</p>
+          <br>
+          <p>A lifetime for one for one truth</p>
+          <p>That I’m alive, And so are you</p>
+          <p>We are here, We are the proof</p>
+          <p>Yeah</p>
+          <br> 
+          <p>A lifetime for one for one truth x 3</p>
+      </p>  
+    </div>
+
+    <br>
+    <br>
+    <div class="exercise2">
+      <h3>2.(Read on the book).</h3>
+    </div>
+
+    <br>
+    <br>
+    <div class="exercise2">
+      <h3>3.(Read on the book).</h3>
+    </div>
+
+    <br>
+    <br>
+    <div class="exercise2">
+      <h3>4.(Read on the book).</h3>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p class="copyright">© CENTRO DE LÍNGUAS 2023</p> 
+</footer>
+</html>
